@@ -19,9 +19,9 @@ h2 {
 }
 h3 {
 	font-style: italic;
-    color: #f7f1e3;
+    color: #2f3640;
 }
-h3 ul {
+h3 ul li {
 	color: #d2dae2;
 	text-decoration: none;
 }
