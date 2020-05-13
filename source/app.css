@@ -75,48 +75,71 @@ h2 span:nth-child(6){
 }
 
 nav{
-	position:  absolute;
-	top: 0;
-	left: 50%;
-	transform: translateX(-10%) translateY(-10%);
-	
-}
-nav a{
-	color: #fff;
 	text-decoration: none;
-	text-align: center;
-	width: 120px;
-	padding: 1em 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+nav ul{
+	float: right;
+	margin:0 20px;
+}
+nav ul li {
 	display: inline-block;
-	font-weight: bold;
-	transition: all .4s ease-in-out;
+	margin: 0 20px;
+}
+nav ul li a{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 17px;
 	
 }
-.line{
-	width: 120px;
-	height: 3px;
-	background-color: #fff;
+a.active, a:hover{
+	background: none;
+	transition: 0.5s;
 }
-nav a:nth-child(2):hover ~ .line{
-	transform: translate(125px);
-	transition: all .4s ease-in-out;
-	background-color:tomato;
+.checkbtn{
+	font-size: 25px;
+	color: white;
+	float: right;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check {
+	display: none;
 }
 
-nav a:nth-child(3):hover ~ .line{
-	transform: translate(250px);
-	transition: all .4s ease-in-out;
-	background-color: yellow;
+@media (max-width: 952px){
+	nav ul li a{
+		font-size: 16px;
+	}
 }
-nav a:nth-child(4):hover ~ .line{
-	transform: translate(375px);
-	transition: all .4s ease-in-out;
-	background-color: violet;
-}
-nav a:nth-child(5):hover ~ .line{
-	transform: translate(500px);
-	transition: all .4s ease-in-out;
-	background-color: skyblue;
+@media (max-width: 858px){
+	.checkbtn{
+		display: block;
+	}
+	nav ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background-color: #333;
+		top: 80px;
+		left: 0;
+		text-align: center;
+	}
+	nav ul li{
+		display: block;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+	a:hover, a:active{
+		background: none;
+		color: #0082e6;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
 }
 .sci{
 	position: absolute;
@@ -224,7 +247,7 @@ nav a:nth-child(5):hover ~ .line{
 }
 p#copyright {
   color:#ffffff; 
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
   padding:  0 ;
   margin-top: 500px;
