@@ -202,55 +202,74 @@ nav ul li a {
       display: none;
 } 
 .testimonials {
-      width: 100%;
-      margin: 700px auto 200px ;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-      grid-gap: 20px;
-}
-.testimonials .card{
       position: relative;
-      width: 350px;
-      margin: 0 auto;
-      background: #f1f2f6;
-      padding: 20px;
-      box-sizing: border-box;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,.5);
-      overflow: hidden;
+      width: 1100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 30px;
 }
-.testimonials .card .layer{
-      position: absolute;
-      top: calc(100%  - 2px);
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(#03a9fe, #e911e3);
+.testimonials .card {
+      position: relative;
+      max-width: 300px;
+      height: 215px;
+      background: #fff;
+      margin: 30px 10px;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      transition: 0.3s ease-in-out;
+}
+.testimonials .card:hover{
+      height: 420px;
+}
+.testimonials .card .imgBx{
+      position: relative;
+      width: 260px;
+      height: 260px;
+      top: -60px;
+      left: 20px;
       z-index: 1;
-      transition: 0.5s;
+      box-shadow: 0 5px 20px rgba(0, 0, 0,0.2);
 }
-.testimonials .card:hover .layer{
-      top: 0;
+.testimonials .card .imgBx img {
+      max-width: 100%;
+      border-radius: 4px;
 }
-
 .testimonials .card .content{
       position: relative;
-      z-index: 2;
+      margin-top: -140px;
+      padding: 10px 15px;
+      text-align: center;
+      color: #111;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+}
+.testimonials .card:hover .content{
+      visibility: visible;
+      opacity: 1;
+      margin-top: -40px;
+      transition-delay: 0.3s;
+
+}
+.testimonials .card .content h2{
+    margin: 0px;
+    padding: 0px;
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
 }
 .testimonials .card .content li {
-      list-style: none;
+     list-style: none;
 }
-.testimonials .card .content li a {
-      font-size: 20px;
-      line-height: 24px;
-      text-decoration: none;
-      color: #dfe4ea;
-      font-family: 'Raleway', sans-serif;
-}
-.testimonials .card  .details h2 {
-      font-family: 'Noto Sans JP', sans-serif;
-       font-size: 25px;
-       letter-spacing: 5px;
-       color: #70a1ff;
-       text-shadow: .1em .1em .2em lightslategray;
+.testimonials .card .content li a{
+    justify-content: center;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 25px;
+    text-decoration: none;
+    color: #60a3bc;
+    font-family: 'Indie Flower', cursive;
 }
