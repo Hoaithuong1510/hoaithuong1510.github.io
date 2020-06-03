@@ -429,4 +429,8 @@ footer p{
     .container{
         display: inline-block;
     }
+    .card .box .imgBx{
+         justify-content: center;
+        flex-wrap: wrap;
+    }
 }
